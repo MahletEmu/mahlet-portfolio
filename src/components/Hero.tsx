@@ -104,12 +104,12 @@ export default function Hero() {
               <div className="relative p-2 rounded-full bg-gradient-to-tr from-brand-violet via-brand-purple to-indigo-500 shadow-glow-purple">
                 <div className="relative w-60 h-60 sm:w-72 sm:h-72 rounded-full overflow-hidden bg-navy-900 border-4 border-navy-950">
                   <Image
-                    src="/images/mahlet-portrait.jpg"
+                    src="/images/mahlet-avatar.png"
                     alt="Mahlet Nigussie"
                     fill
                     priority
                     sizes="(max-width: 640px) 240px, 288px"
-                    className="object-cover object-top filter contrast-105"
+                    className="object-cover object-center filter contrast-105"
                   />
                 </div>
               </div>

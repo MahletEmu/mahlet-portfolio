@@ -152,10 +152,10 @@ export default function Contact() {
             <div className="flex items-center gap-3 pt-4 border-t border-surface-border/60">
               <div className="relative w-10 h-10 rounded-full overflow-hidden bg-navy-900 border border-brand-purple/40 shrink-0">
                 <Image
-                  src="/images/mahlet-portrait.jpg"
+                  src="/images/mahlet-avatar.png"
                   alt="Mahlet Nigussie"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
               </div>
               <div>
