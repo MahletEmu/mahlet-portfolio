@@ -35,6 +35,7 @@ export default function Footer() {
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="#certificates" className="hover:text-white transition-colors">Certificates</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </nav>
 
@@ -88,10 +89,8 @@ export default function Footer() {
         {/* Bottom Copyright matching CodeCraft */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-xs">
           <p>© {currentYear} Mahlet Nigussie. All rights reserved.</p>
-          <p className="flex items-center gap-1 text-slate-400">
-            <span>Made with</span>
-            <span className="text-rose-500">❤️</span>
-            <span>by Mahlet</span>
+          <p className="text-slate-400">
+            Built by Mahlet Nigussie
           </p>
         </div>
 
