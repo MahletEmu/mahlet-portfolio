@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Mahlet Nigussie Portfolio"
+  },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.png"
   }
 };
 
