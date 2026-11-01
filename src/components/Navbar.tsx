@@ -43,23 +43,23 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full overflow-x-hidden transition-all duration-300 ${
         isScrolled
           ? "bg-navy-950/80 backdrop-blur-md border-b border-surface-border shadow-lg"
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-20 w-full">
           {/* Brand Wordmark */}
           <a
             href="#home"
-            className="group flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white focus:outline-none focus:ring-2 focus:ring-brand-purple rounded-lg px-1 py-0.5"
+            className="group flex items-center gap-2 sm:gap-2.5 text-base sm:text-lg font-semibold tracking-tight text-white focus:outline-none focus:ring-2 focus:ring-brand-purple rounded-lg px-1 py-0.5 min-w-0 shrink"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-violet to-brand-electric flex items-center justify-center text-white shadow-glow-sm">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-violet to-brand-electric flex items-center justify-center text-white shadow-glow-sm shrink-0">
               <Code2 className="w-4 h-4" />
             </div>
-            <span className="font-mono text-base sm:text-lg">
+            <span className="font-mono text-sm sm:text-lg truncate">
               <span className="text-brand-purple">&lt;</span>
               <span className="text-white group-hover:text-brand-purple transition-colors">Mahlet</span>
               <span className="text-slate-400">.dev</span>
@@ -98,12 +98,12 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden">
+          {/* Mobile Menu Button - explicit shrink-0 and positioning */}
+          <div className="flex md:hidden shrink-0 ml-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-brand-purple"
+              className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-brand-purple transition-colors"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -114,7 +114,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-navy-900/95 backdrop-blur-xl border-b border-surface-border px-4 pt-3 pb-6 space-y-2 animate-fadeIn">
+        <div className="md:hidden bg-navy-900/95 backdrop-blur-xl border-b border-surface-border px-4 pt-3 pb-6 space-y-2 animate-fadeIn w-full max-w-full overflow-hidden">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (

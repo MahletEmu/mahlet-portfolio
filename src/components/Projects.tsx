@@ -45,11 +45,11 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50">
+    <section id="projects" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50 overflow-hidden w-full max-w-full">
       {/* Background ambient lighting */}
-      <div className="absolute right-1/4 top-1/4 w-96 h-96 bg-brand-violet/10 blur-3xl pointer-events-none" />
+      <div className="absolute right-1/4 top-1/4 w-96 max-w-full h-96 bg-brand-violet/10 blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header exactly like CodeCraft */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
@@ -61,12 +61,12 @@ export default function Projects() {
           </h2>
 
           {/* Clean Category Filters */}
-          <div className="flex items-center gap-2 p-1.5 bg-surface-card/80 backdrop-blur-md rounded-2xl border border-surface-border">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 p-1 sm:p-1.5 bg-surface-card/80 backdrop-blur-md rounded-2xl border border-surface-border max-w-full">
             {(["All", "Full Stack", "Frontend"] as const).map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-5 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ${
+                className={`px-3.5 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ${
                   activeFilter === filter
                     ? "bg-gradient-to-r from-brand-violet to-brand-electric text-white shadow-glow-sm"
                     : "text-slate-400 hover:text-white hover:bg-slate-800/40"

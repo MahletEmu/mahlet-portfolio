@@ -27,11 +27,11 @@ export default function Certificates() {
   };
 
   return (
-    <section id="certificates" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50">
+    <section id="certificates" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50 overflow-hidden w-full max-w-full">
       {/* Background ambient lighting */}
-      <div className="absolute left-1/3 top-1/3 w-96 h-96 bg-brand-violet/10 blur-3xl pointer-events-none" />
+      <div className="absolute left-1/3 top-1/3 w-96 max-w-full h-96 bg-brand-violet/10 blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header matching CodeCraft */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">

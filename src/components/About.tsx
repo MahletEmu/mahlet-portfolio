@@ -21,8 +21,8 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50 overflow-hidden w-full max-w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

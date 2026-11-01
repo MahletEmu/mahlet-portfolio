@@ -20,12 +20,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-navy-950"
+      className="relative pt-28 pb-20 sm:pt-32 sm:pb-24 md:pt-40 md:pb-32 overflow-hidden bg-navy-950 w-full max-w-full"
     >
       {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-radial from-brand-violet/20 via-brand-indigo/10 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] max-w-full h-[500px] bg-gradient-radial from-brand-violet/20 via-brand-indigo/10 to-transparent blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column matching CodeCraft */}
@@ -94,28 +94,28 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Purple Circle Halo + Portrait + Floating Code Card */}
-          <div className="lg:col-span-5 flex justify-center items-center relative">
-            <div className="relative w-full max-w-sm sm:max-w-md flex flex-col items-center">
+          <div className="lg:col-span-5 flex justify-center items-center relative w-full max-w-full overflow-hidden">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex flex-col items-center">
               
               {/* Large Purple Glowing Backdrop Circle */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-brand-violet/60 via-brand-purple/40 to-indigo-600/30 blur-2xl -z-10 animate-pulse" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-brand-violet/60 via-brand-purple/40 to-indigo-600/30 blur-2xl -z-10 animate-pulse pointer-events-none" />
 
               {/* Portrait Frame */}
               <div className="relative p-2 rounded-full bg-gradient-to-tr from-brand-violet via-brand-purple to-indigo-500 shadow-glow-purple">
-                <div className="relative w-60 h-60 sm:w-72 sm:h-72 rounded-full overflow-hidden bg-navy-900 border-4 border-navy-950">
+                <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full overflow-hidden bg-navy-900 border-4 border-navy-950">
                   <Image
                     src="/images/mahlet-portrait.jpg"
                     alt="Mahlet Nigussie"
                     fill
                     priority
-                    sizes="(max-width: 640px) 240px, 288px"
+                    sizes="(max-width: 640px) 208px, (max-width: 768px) 256px, 288px"
                     className="object-cover object-top filter contrast-105"
                   />
                 </div>
               </div>
 
               {/* Floating Code Card matching CodeCraft */}
-              <div className="w-full mt-6 bg-navy-900/95 backdrop-blur-md border border-brand-purple/30 rounded-xl p-4 shadow-card text-left font-mono text-xs text-slate-300 hover:border-brand-purple/60 transition-colors">
+              <div className="w-full max-w-full mt-6 bg-navy-900/95 backdrop-blur-md border border-brand-purple/30 rounded-xl p-3.5 sm:p-4 shadow-card text-left font-mono text-xs text-slate-300 hover:border-brand-purple/60 transition-colors overflow-x-auto">
                 <div className="flex items-center justify-between pb-2 mb-2 border-b border-surface-border">
                   <div className="flex items-center gap-1.5 text-slate-400">
                     <Terminal className="w-3.5 h-3.5 text-brand-purple" />
@@ -124,22 +124,22 @@ export default function Hero() {
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 animate-ping" />
                 </div>
 
-                <div className="space-y-1 text-[11px]">
+                <div className="space-y-1 text-[11px] break-words">
                   <div>
                     <span className="text-brand-purple">const</span> <span className="text-blue-300">developer</span> = &#123;
                   </div>
-                  <div className="pl-4">
+                  <div className="pl-3 sm:pl-4">
                     <span className="text-slate-400">name:</span> <span className="text-emerald-300">&quot;Mahlet&quot;</span>,
                   </div>
-                  <div className="pl-4">
+                  <div className="pl-3 sm:pl-4">
                     <span className="text-slate-400">skills:</span> [
                     <span className="text-amber-300">&quot;HTML&quot;</span>,{" "}
                     <span className="text-amber-300">&quot;CSS&quot;</span>,{" "}
-                    <span className="text-amber-300">&quot;JavaScript&quot;</span>,{" "}
+                    <span className="text-amber-300">&quot;JS&quot;</span>,{" "}
                     <span className="text-amber-300">&quot;React&quot;</span>],
                   </div>
-                  <div className="pl-4">
-                    <span className="text-slate-400">passion:</span> <span className="text-purple-300">&quot;Building things for the web&quot;</span>
+                  <div className="pl-3 sm:pl-4">
+                    <span className="text-slate-400">focus:</span> <span className="text-purple-300">&quot;Web Engineering&quot;</span>
                   </div>
                   <div>&#125;;</div>
                 </div>

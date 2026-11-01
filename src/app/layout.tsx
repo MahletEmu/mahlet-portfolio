@@ -48,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className="min-h-screen font-sans bg-navy-950 text-slate-100 antialiased selection:bg-brand-purple/30 selection:text-white">
+    <html lang="en" className="dark scroll-smooth overflow-x-hidden w-full max-w-full">
+      <body className="min-h-screen font-sans bg-navy-950 text-slate-100 antialiased selection:bg-brand-purple/30 selection:text-white overflow-x-hidden w-full max-w-full">
         {children}
       </body>
     </html>

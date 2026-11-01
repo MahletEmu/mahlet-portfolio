@@ -12,8 +12,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-surface-border/60 bg-navy-950 py-10 text-slate-400 text-xs sm:text-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="border-t border-surface-border/60 bg-navy-950 py-10 text-slate-400 text-xs sm:text-sm overflow-hidden w-full max-w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-surface-border/40">
           

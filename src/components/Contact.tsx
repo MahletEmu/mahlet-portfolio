@@ -109,11 +109,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50">
+    <section id="contact" className="py-24 md:py-32 bg-navy-950 relative border-t border-surface-border/50 overflow-hidden w-full max-w-full">
       {/* Background radial glow */}
-      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[700px] h-[350px] bg-brand-violet/10 blur-3xl pointer-events-none" />
+      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[700px] max-w-full h-[350px] bg-brand-violet/10 blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* 3-Column Layout Matching CodeCraft Reference */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">

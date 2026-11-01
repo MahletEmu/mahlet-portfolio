@@ -81,11 +81,11 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 md:py-32 bg-navy-950 relative overflow-hidden">
+    <section id="skills" className="py-24 md:py-32 bg-navy-950 relative overflow-hidden w-full max-w-full">
       {/* Background ambient radial glow matching CodeCraft */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-radial from-brand-violet/10 via-brand-indigo/5 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] max-w-full h-[400px] bg-gradient-radial from-brand-violet/10 via-brand-indigo/5 to-transparent blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Header exactly like CodeCraft */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-20">
