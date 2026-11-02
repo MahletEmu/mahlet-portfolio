@@ -41,6 +41,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const formEl = document.getElementById("contact-form");
+    if (formEl) {
+      formEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => {
+        document.getElementById("name")?.focus();
+      }, 350);
+    } else {
+      const sectionEl = document.getElementById("contact");
+      sectionEl?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full overflow-x-hidden transition-all duration-300 ${
@@ -75,6 +90,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={link.name === "Contact" ? scrollToContact : undefined}
                   className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     isActive
                       ? "text-brand-purple bg-brand-purple/10 border border-brand-purple/20 shadow-sm"
@@ -91,6 +107,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="#contact"
+              onClick={scrollToContact}
               className="group inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-brand-violet to-brand-electric hover:from-brand-purple hover:to-brand-fuchsia rounded-lg shadow-glow-sm transition-all duration-300 hover:shadow-glow-purple hover:-translate-y-0.5"
             >
               <span>Hire Me</span>
@@ -121,7 +138,13 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  if (link.name === "Contact") {
+                    scrollToContact(e);
+                  } else {
+                    setMobileMenuOpen(false);
+                  }
+                }}
                 className={`block px-4 py-2.5 rounded-lg text-base font-medium transition-colors ${
                   isActive
                     ? "text-brand-purple bg-brand-purple/15 font-semibold"
@@ -135,7 +158,7 @@ export default function Navbar() {
           <div className="pt-3 border-t border-surface-border">
             <a
               href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={scrollToContact}
               className="flex items-center justify-center gap-2 w-full py-2.5 text-center text-sm font-medium text-white bg-gradient-to-r from-brand-violet to-brand-electric rounded-lg shadow-glow-sm"
             >
               <span>Hire Me</span>
@@ -147,4 +170,3 @@ export default function Navbar() {
     </header>
   );
 }
-

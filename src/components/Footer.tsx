@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Code2, ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { Code2, ArrowUp, Github, Linkedin } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
 export default function Footer() {
@@ -11,12 +11,24 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const formEl = document.getElementById("contact-form");
+    if (formEl) {
+      formEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => {
+        document.getElementById("name")?.focus();
+      }, 350);
+    } else {
+      const sectionEl = document.getElementById("contact");
+      sectionEl?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="border-t border-surface-border/60 bg-navy-950 py-10 text-slate-400 text-xs sm:text-sm overflow-hidden w-full max-w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-surface-border/40">
-          
           {/* Brand Wordmark */}
           <div className="flex items-center gap-2.5">
             <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-brand-violet to-brand-electric flex items-center justify-center text-white shadow-glow-sm">
@@ -36,7 +48,7 @@ export default function Footer() {
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#certificates" className="hover:text-white transition-colors">Certificates</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+            <a href="#contact" onClick={scrollToContact} className="hover:text-white transition-colors">Contact</a>
           </nav>
 
           {/* Social Icons & Back to Top */}
@@ -83,17 +95,13 @@ export default function Footer() {
               <ArrowUp className="w-4 h-4" />
             </button>
           </div>
-
         </div>
 
         {/* Bottom Copyright matching CodeCraft */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-xs">
           <p>© {currentYear} Mahlet Nigussie. All rights reserved.</p>
-          <p className="text-slate-400">
-            Built by Mahlet Nigussie
-          </p>
+          <p className="text-slate-400">Built by Mahlet Nigussie</p>
         </div>
-
       </div>
     </footer>
   );

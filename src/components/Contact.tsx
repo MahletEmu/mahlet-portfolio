@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Mail, Phone, Github, Linkedin, Send, CheckCircle2, Copy, Check, Quote, ArrowUpRight } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
@@ -14,6 +14,25 @@ export default function Contact() {
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [showForm, setShowForm] = useState(true);
+
+  // Auto-scroll directly to form if visited via hash
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== "undefined" && (window.location.hash === "#contact" || window.location.hash === "#contact-form")) {
+        setTimeout(() => {
+          const formEl = document.getElementById("contact-form");
+          if (formEl) {
+            formEl.scrollIntoView({ behavior: "smooth", block: "center" });
+            document.getElementById("name")?.focus();
+          }
+        }, 150);
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
 
   // Check if mobile device
   const isMobileDevice = () => {
@@ -131,10 +150,18 @@ export default function Contact() {
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <button
-                onClick={() => setShowForm(!showForm)}
+                onClick={() => {
+                  const formEl = document.getElementById("contact-form");
+                  if (formEl) {
+                    formEl.scrollIntoView({ behavior: "smooth", block: "center" });
+                    setTimeout(() => {
+                      document.getElementById("name")?.focus();
+                    }, 300);
+                  }
+                }}
                 className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-brand-violet to-brand-electric hover:from-brand-purple hover:to-brand-fuchsia rounded-xl shadow-glow-sm hover:shadow-glow-purple transition-all duration-300 hover:-translate-y-0.5"
               >
-                <span>{showForm ? "Hide Form" : "Get In Touch"}</span>
+                <span>Write a Message</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
@@ -278,7 +305,10 @@ export default function Contact() {
 
         {/* Embedded Clean Form (Submits In-Page Without Redirecting) */}
         {showForm && (
-          <div className="p-6 sm:p-8 rounded-2xl bg-surface-card/90 border border-brand-purple/30 shadow-card max-w-2xl mx-auto animate-fadeIn">
+          <div
+            id="contact-form"
+            className="scroll-mt-24 sm:scroll-mt-28 p-6 sm:p-8 rounded-2xl bg-surface-card/90 border border-brand-purple/30 shadow-card max-w-2xl mx-auto animate-fadeIn"
+          >
             <h3 className="text-xl font-bold text-white mb-2">
               Send a Direct Message
             </h3>
