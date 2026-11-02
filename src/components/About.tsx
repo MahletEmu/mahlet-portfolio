@@ -33,15 +33,15 @@ export default function About() {
             </span>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-              I&apos;m passionate about creating digital solutions
+              Passionate about building for the web
             </h2>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              As a fourth-year Software Engineering student at Bahir Dar University in Ethiopia, I focus on turning complex challenges into intuitive, high-performance web applications.
+              I&apos;m a fourth-year Software Engineering student at Bahir Dar University in Ethiopia. I enjoy building clean, responsive, and easy-to-use websites and web applications with modern tools.
             </p>
 
             <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-              Combining frontend craftsmanship with practical full-stack development, I build clean, efficient, and user-friendly software products with modern technologies.
+              I love learning by doing—turning ideas into working projects, exploring new technologies, and improving my development skills with every project I create.
             </p>
 
             <div className="pt-2">
@@ -49,7 +49,7 @@ export default function About() {
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium text-white bg-surface-card hover:bg-surface-hover border border-surface-border hover:border-brand-purple/50 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
               >
-                <span>Learn More About Me</span>
+                <span>View My Projects</span>
                 <User className="w-4 h-4 text-brand-purple" />
               </a>
             </div>

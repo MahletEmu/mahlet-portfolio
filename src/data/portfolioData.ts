@@ -38,16 +38,15 @@ export interface SkillCategory {
 export const PERSONAL_INFO = {
   name: "Mahlet Nigussie",
   eyebrow: "SOFTWARE ENGINEERING STUDENT",
-  headline: "Building thoughtful digital experiences.",
+  headline: "Building practical web experiences.",
   intro:
-    "I'm Mahlet Nigussie, a fourth-year Software Engineering student at Bahir Dar University. I build web applications and user-focused digital experiences, combining frontend craftsmanship with practical full-stack development.",
+    "I'm Mahlet Nigussie, a fourth-year Software Engineering student at Bahir Dar University. I enjoy building clean, responsive web applications and learning new technologies through hands-on projects.",
   supportingStatement:
-    "Passionate about solving real-world problems through software, continuously improving my engineering skills, and turning ideas into useful digital products.",
-  aboutHeading: "Curious by nature. Building through code.",
+    "Passionate about building practical websites, learning modern web tools, and turning creative ideas into useful applications.",
+  aboutHeading: "Curious developer. Learning and building through code.",
   aboutStory: [
-    "As a fourth-year Software Engineering student at Bahir Dar University in Ethiopia, I focus on transforming complex ideas into intuitive, high-performance web applications. My foundation bridges disciplined computer science principles with hands-on modern software engineering.",
-    "Over the past years, I have engineered full-stack platforms incorporating modern frameworks, relational and document databases, authenticated user workflows, and AI integrations. Whether designing accessible user interfaces or architecting scalable backend APIs, I approach every project with curiosity, architectural rigor, and attention to detail.",
-    "I am eager to contribute to collaborative engineering teams, tackle challenging technical problems, and continuously refine my engineering craft."
+    "I'm a fourth-year Software Engineering student at Bahir Dar University in Ethiopia. I enjoy building clean, responsive, and easy-to-use web applications using tools like React, Next.js, and JavaScript.",
+    "I love learning by doing—turning ideas into working websites, exploring new technologies, and continuously improving my coding skills with every project I create."
   ],
   education: {
     institution: "Bahir Dar University",
@@ -56,7 +55,7 @@ export const PERSONAL_INFO = {
     level: "Fourth-Year Student",
     expectedGraduation: "Expected 2028",
     availability:
-      "I'm open to software engineering internship opportunities, collaborative development projects, and opportunities to contribute to products that solve real problems."
+      "I'm open to software engineering internships and collaborative development projects where I can contribute, learn, and grow."
   },
   contacts: {
     email: "mimisha1513@gmail.com",

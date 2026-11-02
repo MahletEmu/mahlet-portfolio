@@ -49,7 +49,7 @@ export default function Hero() {
 
             {/* Concise Supporting Statement */}
             <p className="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">
-              I&apos;m a fourth-year Software Engineering student at Bahir Dar University specializing in building thoughtful digital experiences with modern web technologies.
+              I&apos;m a fourth-year Software Engineering student at Bahir Dar University. I love building practical, responsive web applications and learning new technologies through hands-on projects.
             </p>
 
             {/* Actions: View My Work & Download CV */}
