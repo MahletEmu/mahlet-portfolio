@@ -56,20 +56,22 @@ export default function About() {
           </div>
 
           {/* Right Column: 2x2 Clean Stat Cards Matching CodeCraft */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-5 w-full">
             {STATS.map((stat, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-surface-card/70 border border-surface-border hover:border-brand-purple/40 transition-all duration-300 shadow-card hover:-translate-y-1 group"
+                className="p-4 sm:p-6 rounded-2xl bg-surface-card/70 border border-surface-border hover:border-brand-purple/40 transition-all duration-300 shadow-card hover:-translate-y-1 group flex flex-col justify-between"
               >
-                <div className="w-12 h-12 rounded-xl bg-navy-900 border border-surface-border flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-navy-900 border border-surface-border flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-105 transition-transform shrink-0">
                   {getStatIcon(stat.icon)}
                 </div>
-                <div className="text-2xl sm:text-3xl font-bold text-white mb-1 tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm text-slate-400 font-medium">
-                  {stat.label}
+                <div>
+                  <div className="text-xl sm:text-3xl font-bold text-white mb-0.5 sm:mb-1 tracking-tight">
+                    {stat.value}
+                  </div>
+                  <div className="text-[11px] sm:text-xs md:text-sm text-slate-400 font-medium leading-tight">
+                    {stat.label}
+                  </div>
                 </div>
               </div>
             ))}

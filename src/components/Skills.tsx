@@ -126,25 +126,25 @@ export default function Skills() {
         </div>
 
         {/* Clean 8-Card Grid in foundational sequence (HTML -> CSS -> JS -> TS -> React -> Next.js -> Node.js -> Git) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6 w-full">
           {TECH_SKILLS.map((skill) => (
             <div
               key={skill.name}
-              className="group p-5 rounded-2xl bg-card-gradient border border-surface-border hover:border-brand-purple/50 transition-all duration-300 shadow-card hover:shadow-card-hover hover:-translate-y-1 flex items-center gap-4"
+              className="group p-4 sm:p-5 rounded-2xl bg-card-gradient border border-surface-border hover:border-brand-purple/50 transition-all duration-300 shadow-card hover:shadow-card-hover hover:-translate-y-1 flex items-center gap-3.5 sm:gap-4"
             >
               {/* Brand Logo Container */}
               <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${skill.bgColor} border ${skill.borderColor} group-hover:scale-110 transition-transform duration-300 shadow-sm`}
+                className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 ${skill.bgColor} border ${skill.borderColor} group-hover:scale-110 transition-transform duration-300 shadow-sm`}
               >
                 {renderSkillLogo(skill.icon)}
               </div>
 
               {/* Tech Details */}
               <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold text-white group-hover:text-brand-purple transition-colors truncate">
+                <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-brand-purple transition-colors truncate">
                   {skill.name}
                 </h3>
-                <p className="text-xs text-slate-400 font-medium truncate mt-0.5">
+                <p className="text-[11px] sm:text-xs text-slate-400 font-medium truncate mt-0.5">
                   {skill.category}
                 </p>
               </div>
