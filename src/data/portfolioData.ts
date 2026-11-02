@@ -339,6 +339,20 @@ export interface TechSkill {
 
 export const TECH_SKILLS: TechSkill[] = [
   {
+    name: "HTML5",
+    category: "Semantic Web Structure",
+    icon: "html",
+    bgColor: "bg-orange-500/10",
+    borderColor: "border-orange-500/30"
+  },
+  {
+    name: "CSS3",
+    category: "Responsive Layouts & Styling",
+    icon: "css",
+    bgColor: "bg-blue-500/10",
+    borderColor: "border-blue-500/30"
+  },
+  {
     name: "JavaScript",
     category: "Core Language (ES6+)",
     icon: "js",
@@ -367,27 +381,6 @@ export const TECH_SKILLS: TechSkill[] = [
     borderColor: "border-slate-700"
   },
   {
-    name: "HTML5",
-    category: "Semantic Web Structure",
-    icon: "html",
-    bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/30"
-  },
-  {
-    name: "CSS3",
-    category: "Responsive Layouts & Styling",
-    icon: "css",
-    bgColor: "bg-blue-500/10",
-    borderColor: "border-blue-500/30"
-  },
-  {
-    name: "Tailwind CSS",
-    category: "Utility-First Design System",
-    icon: "tailwind",
-    bgColor: "bg-sky-500/10",
-    borderColor: "border-sky-500/30"
-  },
-  {
     name: "Node.js",
     category: "Server Runtime & APIs",
     icon: "node",
@@ -400,27 +393,6 @@ export const TECH_SKILLS: TechSkill[] = [
     icon: "git",
     bgColor: "bg-orange-600/10",
     borderColor: "border-orange-600/30"
-  },
-  {
-    name: "Supabase",
-    category: "PostgreSQL & Auth Services",
-    icon: "supabase",
-    bgColor: "bg-emerald-500/10",
-    borderColor: "border-emerald-500/30"
-  },
-  {
-    name: "MongoDB",
-    category: "NoSQL Document Database",
-    icon: "mongodb",
-    bgColor: "bg-green-600/10",
-    borderColor: "border-green-500/30"
-  },
-  {
-    name: "REST APIs",
-    category: "Data Fetching & Integration",
-    icon: "api",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30"
   }
 ];
 

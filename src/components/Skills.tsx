@@ -6,9 +6,32 @@ import { TECH_SKILLS } from "@/data/portfolioData";
 export default function Skills() {
   const renderSkillLogo = (icon: string) => {
     switch (icon) {
+      case "html":
+        return (
+          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
+            <path d="M4.5 3L5.8 18.5L12 20.5L18.2 18.5L19.5 3H4.5Z" fill="#E44D26" />
+            <path d="M12 4.5V19L17 17.4L18.1 4.5H12Z" fill="#F16529" />
+            <path
+              d="M8.5 7.5H15.5L15.3 9.8H11.8L12 12.2H15L14.7 15.5L12 16.3L9.3 15.5L9.1 13.5H7.3L7.7 17.2L12 18.4L16.3 17.2L16.9 10.8L17.1 7.5H8.5V7.5Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        );
+
+      case "css":
+        return (
+          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
+            <path d="M4.5 3L5.8 18.5L12 20.5L18.2 18.5L19.5 3H4.5Z" fill="#1572B6" />
+            <path d="M12 4.5V19L17 17.4L18.1 4.5H12Z" fill="#33A9DC" />
+            <path
+              d="M8.5 7.5H15.5L15.3 9.8H12V12.2H15L14.7 15.5L12 16.3L9.3 15.5L9.1 13.5H7.3L7.7 17.2L12 18.4L16.3 17.2L17.1 7.5H8.5V7.5Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        );
+
       case "js":
         return (
-          
           <svg className="w-7 h-7 rounded" viewBox="0 0 24 24" fill="none">
             <rect width="24" height="24" rx="4" fill="#F7DF1E" />
             <path
@@ -58,37 +81,6 @@ export default function Skills() {
           </svg>
         );
 
-      case "html":
-        return (
-          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <path d="M4.5 3L5.8 18.5L12 20.5L18.2 18.5L19.5 3H4.5Z" fill="#E44D26" />
-            <path d="M12 4.5V19L17 17.4L18.1 4.5H12Z" fill="#F16529" />
-            <path
-              d="M8.5 7.5H15.5L15.3 9.8H11.8L12 12.2H15L14.7 15.5L12 16.3L9.3 15.5L9.1 13.5H7.3L7.7 17.2L12 18.4L16.3 17.2L16.9 10.8L17.1 7.5H8.5V7.5Z"
-              fill="#FFFFFF"
-            />
-          </svg>
-        );
-
-      case "css":
-        return (
-          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <path d="M4.5 3L5.8 18.5L12 20.5L18.2 18.5L19.5 3H4.5Z" fill="#1572B6" />
-            <path d="M12 4.5V19L17 17.4L18.1 4.5H12Z" fill="#33A9DC" />
-            <path
-              d="M8.5 7.5H15.5L15.3 9.8H12V12.2H15L14.7 15.5L12 16.3L9.3 15.5L9.1 13.5H7.3L7.7 17.2L12 18.4L16.3 17.2L17.1 7.5H8.5V7.5Z"
-              fill="#FFFFFF"
-            />
-          </svg>
-        );
-
-      case "tailwind":
-        return (
-          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#38BDF8">
-            <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.335 6.182 14.974 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.335 13.382 8.974 12 6.001 12z" />
-          </svg>
-        );
-
       case "node":
         return (
           <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
@@ -102,42 +94,6 @@ export default function Skills() {
         return (
           <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#F05032">
             <path d="M21.6 10.9L13.1 2.4C12.6 1.9 11.7 1.9 11.2 2.4L9.3 4.3L11.8 6.8C12.4 6.6 13.1 6.8 13.6 7.3C14.1 7.8 14.2 8.6 14 9.2L16.4 11.6C17 11.4 17.8 11.5 18.3 12C19 12.7 19 13.8 18.3 14.5C17.6 15.2 16.5 15.2 15.8 14.5C15.3 14 15.1 13.2 15.4 12.6L13.1 10.3V15.4C13.3 15.6 13.4 15.9 13.4 16.3C13.4 17.4 12.5 18.3 11.4 18.3C10.3 18.3 9.4 17.4 9.4 16.3C9.4 15.4 10 14.7 10.8 14.4V9.3C10 9 9.4 8.3 9.4 7.4C9.4 7 9.5 6.7 9.7 6.4L7.2 3.9L2.4 8.7C1.9 9.2 1.9 10.1 2.4 10.6L10.9 19.1C11.4 19.6 12.3 19.6 12.8 19.1L21.6 10.3C22.1 10.5 22.1 9.6 21.6 10.9Z" />
-          </svg>
-        );
-
-      case "supabase":
-        return (
-          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M13.4 2.1C13 1.5 12.1 1.6 11.9 2.3L7.3 13.2C7 14 7.6 14.8 8.4 14.8H12.6L10.6 21.9C11 22.5 11.9 22.4 12.1 21.7L16.7 10.8C17 10 16.4 9.2 15.6 9.2H11.4L13.4 2.1Z"
-              fill="#3ECF8E"
-            />
-          </svg>
-        );
-
-      case "mongodb":
-        return (
-          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12 2C11.8 2 11.5 2.1 11.4 2.3C10.3 4.2 5 11.5 5 15.6C5 19.6 8.1 22.8 12 22.8C15.9 22.8 19 19.6 19 15.6C19 11.5 13.7 4.2 12.6 2.3C12.5 2.1 12.2 2 12 2Z"
-              fill="#47A248"
-            />
-            <path
-              d="M12 2.5V22.5C11.6 22.5 11.2 22.4 10.8 22.2C10.8 20.3 11 17.5 11.6 15.5C12.1 13.6 12.4 10.8 12 2.5Z"
-              fill="#3FA037"
-            />
-            <path
-              d="M12 2.5C11.6 10.8 11.9 13.6 12.4 15.5C13 17.5 13.2 20.3 13.2 22.2C13.6 22.4 14 22.5 14.4 22.5V2.5H12Z"
-              fill="#52B54B"
-            />
-          </svg>
-        );
-
-      case "api":
-        return (
-          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="#A855F7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
           </svg>
         );
 
@@ -169,8 +125,8 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Clean Tech Cards Grid - No percentages, authentic brand logos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {/* Clean 8-Card Grid in foundational sequence (HTML -> CSS -> JS -> TS -> React -> Next.js -> Node.js -> Git) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {TECH_SKILLS.map((skill) => (
             <div
               key={skill.name}
