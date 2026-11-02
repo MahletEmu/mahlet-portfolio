@@ -331,21 +331,100 @@ export const PROJECTS: Project[] = [
 
 export interface TechSkill {
   name: string;
-  percentage: number;
+  category: string;
   icon: string;
+  bgColor: string;
+  borderColor: string;
 }
 
-export const MASTERED_SKILLS: TechSkill[] = [
-  { name: "HTML", percentage: 95, icon: "html" },
-  { name: "CSS", percentage: 90, icon: "css" },
-  { name: "JavaScript", percentage: 90, icon: "js" },
-  { name: "React.js", percentage: 85, icon: "react" },
-  { name: "Next.js", percentage: 80, icon: "next" },
-  { name: "TypeScript", percentage: 85, icon: "ts" },
-  { name: "Node.js", percentage: 80, icon: "node" },
-  { name: "Tailwind CSS", percentage: 90, icon: "tailwind" },
-  { name: "Git", percentage: 85, icon: "git" },
+export const TECH_SKILLS: TechSkill[] = [
+  {
+    name: "JavaScript",
+    category: "Core Language (ES6+)",
+    icon: "js",
+    bgColor: "bg-amber-500/10",
+    borderColor: "border-amber-500/30"
+  },
+  {
+    name: "TypeScript",
+    category: "Type-Safe Development",
+    icon: "ts",
+    bgColor: "bg-blue-600/15",
+    borderColor: "border-blue-500/30"
+  },
+  {
+    name: "React.js",
+    category: "UI Component Library",
+    icon: "react",
+    bgColor: "bg-cyan-500/10",
+    borderColor: "border-cyan-500/30"
+  },
+  {
+    name: "Next.js",
+    category: "Full-Stack App Framework",
+    icon: "next",
+    bgColor: "bg-black/60",
+    borderColor: "border-slate-700"
+  },
+  {
+    name: "HTML5",
+    category: "Semantic Web Structure",
+    icon: "html",
+    bgColor: "bg-orange-500/10",
+    borderColor: "border-orange-500/30"
+  },
+  {
+    name: "CSS3",
+    category: "Responsive Layouts & Styling",
+    icon: "css",
+    bgColor: "bg-blue-500/10",
+    borderColor: "border-blue-500/30"
+  },
+  {
+    name: "Tailwind CSS",
+    category: "Utility-First Design System",
+    icon: "tailwind",
+    bgColor: "bg-sky-500/10",
+    borderColor: "border-sky-500/30"
+  },
+  {
+    name: "Node.js",
+    category: "Server Runtime & APIs",
+    icon: "node",
+    bgColor: "bg-emerald-500/10",
+    borderColor: "border-emerald-500/30"
+  },
+  {
+    name: "Git & GitHub",
+    category: "Version Control & Collaboration",
+    icon: "git",
+    bgColor: "bg-orange-600/10",
+    borderColor: "border-orange-600/30"
+  },
+  {
+    name: "Supabase",
+    category: "PostgreSQL & Auth Services",
+    icon: "supabase",
+    bgColor: "bg-emerald-500/10",
+    borderColor: "border-emerald-500/30"
+  },
+  {
+    name: "MongoDB",
+    category: "NoSQL Document Database",
+    icon: "mongodb",
+    bgColor: "bg-green-600/10",
+    borderColor: "border-green-500/30"
+  },
+  {
+    name: "REST APIs",
+    category: "Data Fetching & Integration",
+    icon: "api",
+    bgColor: "bg-purple-500/10",
+    borderColor: "border-purple-500/30"
+  }
 ];
+
+export const MASTERED_SKILLS = TECH_SKILLS;
 
 export const STATS = [
   {
