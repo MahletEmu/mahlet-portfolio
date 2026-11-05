@@ -15,17 +15,33 @@ export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [showForm, setShowForm] = useState(true);
 
-  // Auto-scroll directly to form if visited via hash
+  // Smooth scroll directly to form and focus name input
+  const scrollToForm = () => {
+    const formEl = document.getElementById("contact-form");
+    if (formEl) {
+      formEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => {
+        document.getElementById("name")?.focus();
+      }, 300);
+    }
+  };
+
+  // Auto-scroll logic based on URL hash
   useEffect(() => {
     const handleHash = () => {
-      if (typeof window !== "undefined" && (window.location.hash === "#contact" || window.location.hash === "#contact-form")) {
-        setTimeout(() => {
-          const formEl = document.getElementById("contact-form");
-          if (formEl) {
-            formEl.scrollIntoView({ behavior: "smooth", block: "center" });
-            document.getElementById("name")?.focus();
-          }
-        }, 150);
+      if (typeof window !== "undefined") {
+        if (window.location.hash === "#contact-form") {
+          setTimeout(() => {
+            scrollToForm();
+          }, 150);
+        } else if (window.location.hash === "#contact" || window.location.hash === "#contact-info") {
+          setTimeout(() => {
+            const infoEl = document.getElementById("contact-info") || document.getElementById("contact");
+            if (infoEl) {
+              infoEl.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }, 150);
+        }
       }
     };
 
@@ -150,15 +166,7 @@ export default function Contact() {
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <button
-                onClick={() => {
-                  const formEl = document.getElementById("contact-form");
-                  if (formEl) {
-                    formEl.scrollIntoView({ behavior: "smooth", block: "center" });
-                    setTimeout(() => {
-                      document.getElementById("name")?.focus();
-                    }, 300);
-                  }
-                }}
+                onClick={scrollToForm}
                 className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-brand-violet to-brand-electric hover:from-brand-purple hover:to-brand-fuchsia rounded-xl shadow-glow-sm hover:shadow-glow-purple transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span>Write a Message</span>
@@ -193,7 +201,7 @@ export default function Contact() {
           </div>
 
           {/* Column 3: Follow Me & Direct Contacts Matching Reference */}
-          <div className="lg:col-span-3 space-y-4">
+          <div id="contact-info" className="lg:col-span-3 space-y-4 scroll-mt-24 sm:scroll-mt-28">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold tracking-widest text-slate-400 uppercase">
                 FOLLOW ME
@@ -298,6 +306,15 @@ export default function Contact() {
                   </span>
                 )}
               </div>
+
+              {/* Write a Message Button in Column 3 */}
+              <button
+                onClick={scrollToForm}
+                className="w-full mt-2.5 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-brand-violet to-brand-electric hover:from-brand-purple hover:to-brand-fuchsia rounded-xl shadow-glow-sm hover:shadow-glow-purple transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <span>Write a Message</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
 

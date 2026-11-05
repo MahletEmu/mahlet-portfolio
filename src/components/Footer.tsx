@@ -13,15 +13,9 @@ export default function Footer() {
 
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
-    const formEl = document.getElementById("contact-form");
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: "smooth", block: "center" });
-      setTimeout(() => {
-        document.getElementById("name")?.focus();
-      }, 350);
-    } else {
-      const sectionEl = document.getElementById("contact");
-      sectionEl?.scrollIntoView({ behavior: "smooth" });
+    const contactInfoEl = document.getElementById("contact-info") || document.getElementById("contact");
+    if (contactInfoEl) {
+      contactInfoEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
